@@ -1,0 +1,293 @@
+DevOps Visual Learning
+
+Understanding DevOps Through Diagrams, Examples, and Practical Learning
+
+Welcome to my DevOps Visual Learning repository! This project is designed to explain DevOps concepts in a simple, structured, and beginner-friendly way using diagrams, explanations, and practical examples.
+
+1. Introduction to DevOps
+
+DevOps is a combination of Development (Dev) and Operations (Ops). It is a culture, set of practices, and collection of tools that help teams build, test, release, and maintain software more efficiently.
+
+Traditionally, development and operations teams often worked separately. This could create communication gaps, delayed releases, and difficulties when software behaved differently in testing and production environments.
+
+DevOps encourages both teams to collaborate throughout the software lifecycle.
+
+Why Do We Need DevOps?
+
+- To improve collaboration between teams.
+- To reduce manual and repetitive work through automation.
+- To identify problems earlier through testing and monitoring.
+- To make software releases more reliable and repeatable.
+- To collect feedback and continuously improve applications.
+
+2. Development Team vs Operations Team
+
+Development Team
+
+The development team focuses on designing, writing, and improving application code.
+
+Typical responsibilities:
+
+- Understanding requirements.
+- Designing application features.
+- Writing and reviewing code.
+- Fixing bugs.
+- Creating automated tests.
+
+Operations Team
+
+The operations team focuses on deploying, running, securing, and maintaining applications.
+
+Typical responsibilities:
+
+- Managing servers and infrastructure.
+- Configuring deployment environments.
+- Monitoring application performance.
+- Managing availability and reliability.
+- Responding to operational incidents.
+
+The Traditional Challenge
+
+When teams work in isolation, developers may focus on releasing new features while operations engineers focus on system stability. Without coordination, releases can become slow and unexpected issues can occur.
+
+How DevOps Helps
+
+DevOps encourages shared responsibility, frequent communication, automation, and feedback. Development and operations work together instead of treating software delivery as separate responsibilities.
+
+3. DevOps Collaboration and Feedback
+
+DevOps is not simply about installing tools. Collaboration and feedback are essential.
+
+A typical collaborative workflow is:
+
+1. Developers write and commit code.
+2. Automated systems build and test the changes.
+3. The team reviews test results.
+4. Approved changes are deployed to an environment.
+5. Monitoring tools collect information about application behaviour.
+6. Feedback helps the team identify improvements.
+7. The next development cycle begins.
+
+This feedback loop helps teams discover problems earlier and make informed improvements.
+
+4. The DevOps Infinity Loop
+
+The DevOps infinity loop represents continuous development and operations activities.
+
+The loop is commonly divided into eight stages:
+
+4.1 Plan
+
+Teams define requirements, prioritize tasks, discuss features, and prepare a development plan.
+
+Examples: task boards, issue tracking, sprint planning.
+
+4.2 Code
+
+Developers write application code and manage changes using version control.
+
+Example: Git and GitHub.
+
+4.3 Build
+
+Source code is compiled, packaged, or prepared into a deployable artifact.
+
+Example: Maven for supported Java projects.
+
+4.4 Test
+
+Automated and manual tests check whether the application behaves as expected.
+
+Testing helps identify defects before changes reach users.
+
+4.5 Release
+
+A tested version is prepared and approved for deployment.
+
+Release processes may include versioning, approvals, and release notes.
+
+4.6 Deploy
+
+The application is delivered to a target environment, such as staging or production.
+
+Automation can make deployments more consistent and repeatable.
+
+4.7 Operate
+
+The team manages the running application and its infrastructure.
+
+This includes configuration, availability, capacity, security, and incident response.
+
+4.8 Monitor
+
+Monitoring helps teams understand application health, errors, performance, and user experience.
+
+The information gathered feeds back into planning and development.
+
+Important: These stages are connected and iterative. Real-world workflows can overlap, and teams may organize them differently.
+
+5. DevOps Lifecycle Diagram
+
+The following is an original diagram illustrating a simplified DevOps lifecycle.
+
+flowchart LR
+    A[Plan] --> B[Code]
+    B --> C[Build]
+    C --> D[Test]
+    D --> E[Release]
+    E --> F[Deploy]
+    F --> G[Operate]
+    G --> H[Monitor]
+    H --> A
+
+Diagram Explanation
+
+The arrows show how work moves through the lifecycle. Monitoring produces feedback that can influence future planning. Teams repeat this process as the application evolves.
+
+The cycle does not mean every organization follows exactly the same sequence. It represents the principle of continuous improvement.
+
+6. CI/CD: Continuous Integration and Continuous Delivery
+
+Continuous Integration (CI)
+
+Continuous Integration means frequently integrating code changes into a shared repository and validating them using automated builds and tests.
+
+Benefits:
+
+- Earlier detection of integration problems.
+- Faster feedback for developers.
+- More confidence in code changes.
+- Less reliance on large, infrequent integrations.
+
+Continuous Delivery (CD)
+
+Continuous Delivery extends the pipeline by keeping validated software ready for release. Depending on the workflow, production deployment may require a manual approval.
+
+Continuous Deployment
+
+Continuous Deployment goes a step further: changes that pass the required automated checks can be deployed to production automatically.
+
+Continuous Delivery and Continuous Deployment are related but are not identical.
+
+Example CI/CD Workflow
+
+flowchart TD
+    A[Developer changes code] --> B[Git commit and push]
+    B --> C[Automated build]
+    C --> D[Automated tests]
+    D --> E{Checks passed?}
+    E -- No --> F[Review and fix issues]
+    F --> A
+    E -- Yes --> G[Package application]
+    G --> H[Deploy to staging]
+    H --> I[Approval or automated release]
+    I --> J[Deploy to production]
+    J --> K[Monitor application]
+
+This is an illustrative pipeline. Actual stages and approval rules depend on the project and organization.
+
+7. Common DevOps Tools
+
+Different tools support different activities. No single tool is required for every DevOps workflow.
+
+Category| Example tools| Purpose
+Version control| Git, GitHub| Track and collaborate on code
+Build| Maven, Gradle| Build and package applications
+CI/CD| Jenkins, GitHub Actions| Automate workflows and pipelines
+Containers| Docker| Package applications and dependencies
+Orchestration| Kubernetes| Manage containerized workloads
+Configuration management| Ansible| Automate configuration tasks
+Infrastructure as Code| Terraform| Define and manage infrastructure
+Monitoring| Prometheus, Grafana| Observe metrics and visualize system health
+
+Tool selection depends on the application, infrastructure, budget, and team's requirements.
+
+8. Benefits of DevOps
+
+Faster Delivery
+
+Automation and smaller changes can help teams deliver improvements more frequently.
+
+Improved Collaboration
+
+Shared goals and feedback reduce communication barriers.
+
+Better Reliability
+
+Repeatable builds, automated tests, and controlled deployments help reduce avoidable mistakes.
+
+Faster Feedback
+
+Monitoring and testing provide information that helps teams respond to problems.
+
+Continuous Improvement
+
+Teams use results, feedback, and incidents to improve processes over time.
+
+9. Practical Beginner Project
+
+Project: Build a Simple CI Pipeline
+
+Goal: Learn how code moves from a GitHub repository through automated checks.
+
+Suggested steps:
+
+1. Create a small sample application.
+2. Store the source code in GitHub.
+3. Add a simple automated test.
+4. Configure a GitHub Actions workflow.
+5. Run the workflow when code is pushed.
+6. Review the build and test results.
+7. Update the code and observe the next workflow run.
+
+Learning outcomes:
+
+- Git and GitHub fundamentals.
+- Basic YAML workflow syntax.
+- Automated build and test concepts.
+- Understanding CI pipeline feedback.
+
+Start with a small, safe sample project before working with production systems.
+
+10. Learning Roadmap
+
+- Stage 1: Linux and command-line fundamentals.
+- Stage 2: Git and GitHub.
+- Stage 3: Basic scripting with Bash or Python.
+- Stage 4: Build tools and CI/CD fundamentals.
+- Stage 5: Docker and container fundamentals.
+- Stage 6: Cloud and infrastructure fundamentals.
+- Stage 7: Infrastructure as Code and configuration management.
+- Stage 8: Monitoring, security, and practical projects.
+
+Learn progressively and practise each topic before moving to the next.
+
+11. Repository Structure
+
+DevOps-Visual-Learning/
+├── README.md
+├── diagrams/
+│   ├── devops-lifecycle.mmd
+│   └── cicd-pipeline.mmd
+├── notes/
+│   ├── introduction-to-devops.md
+│   ├── development-vs-operations.md
+│   └── continuous-integration-and-delivery.md
+└── projects/
+    └── beginner-ci-pipeline.md
+
+This is a suggested structure. Add each file as you create its content.
+
+12. Disclaimer and Credits
+
+This repository is intended for educational purposes.
+
+Original explanations and diagrams created for this project should be distinguished from third-party material. Any external material should be credited appropriately and shared only when its licence or permission allows redistribution.
+
+Conclusion
+
+DevOps brings people, processes, and technology together to improve the way software is developed, delivered, and operated.
+
+By understanding the lifecycle, practising automation, and building small projects, beginners can gradually develop practical DevOps skills.
+
+This repository is part of my ongoing engineering learning journey.
